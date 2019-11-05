@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <title>Feedback</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type = "text/css" href="{% static 'css/feedback.css' %}">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">JIST</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto ">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home<span class="sr-only"></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <form id="feedback" class="log" action="/feedback/" method="post">
+    {% csrf_token %}
+    <h1> Feedback </h1>
+
+    <!-- Star ratings -->
+    <div class="stars">
+      <input type="radio" name="rating" value="1 star" id="one">
+      <label for="one">
+        <img src="{% static 'images/one-star.png' %}">
+      </label>
+      <input type="radio" name="rating" value="2 Star" id="two">
+      <label for="two">
+        <img src="{% static 'images/two-star.png' %}">
+      </label>
+      <input type="radio" name="rating" value="3 Star" id="three">
+      <label for="three">
+        <img src="{% static 'images/three-star.png' %}">
+      </label>
+      <input type="radio" name="rating" value="4 Star" id="four">
+      <label for="four">
+        <img src="{% static 'images/four-star.png' %}">
+      </label>
+      <input type="radio" name="rating" value="5 Star" id="five">
+      <label for="five">
+        <img src="{% static 'images/five-star.png' %}">
+      </label>
+    </div>
+    <!-- Feedback Box -->
+    <textarea name="feedback" rows="4" cols="50" placeholder="Feedback" form="feedback"></textarea>
+    <!--Name Box -->
+    <input type="text" name="Name" placeholder="Name(Optional)">
+    <!--Submit Button-->
+    <input id="bttn" type="submit" name="" value="Submit">
+  </form>
+
+ <div class="feedbacks">
+ {% for feeds in feedback %}
+   <p class="comment">"{{feeds.cmnt}}"</p>
+   <p class="name">~ {{feeds.name}}</p>
+   <p>I Rate it {{feeds.rating}}</p>
+   {% endfor %}
+    
+  </div>  
+
+</body>
+
+</html>

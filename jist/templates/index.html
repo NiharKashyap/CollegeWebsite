@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.css' %}">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/lightbox-plus-jquery.js' %}"></script>
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <img src="{% static 'images/JIST.png' %}" width="50px" height="50px">
+    <a class="navbar-brand" href="//">Jorhat Institute Of Science And Technology</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto ">
+        {% if name %}
+        <li class="nav-item">
+          <a class="nav-link" href="/">Logout <span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Departments
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">BSc</a>
+            <a class="dropdown-item" href="/bscit/">BSc IT</a>
+            <a class="dropdown-item" href="#">Engineering</a>
+            <a class="dropdown-item" href="#">MSc</a>
+          </div>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" href="/login/">Login <span class="sr-only"></span></a>
+        </li>
+
+        {% endif %}
+
+        <li class="nav-item">
+          <a class="nav-link" href="/feedback/">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/notice/">Notice Board</a>
+        </li>
+        {% if name %}
+        <li class="nav-item">
+          <a class="nav-link" href="/PutDetails/{{name}}/">Details</a>
+        </li>
+        {% endif %}
+
+      </ul>
+    </div>
+  </nav>
+
+  <div class="pic">
+    <div class="parallax">
+    </div>
+  </div>
+  <!--Writing Section-->  
+  <div class="container">
+    <h4>About Jorhat Institute of Science and Technology</h4>
+    <hr align="left">
+    <div class="row">
+    <div class="col">
+        Jorhat Institute of Science and Technology, in short, JIST is a premier and unique Institute of Assam,
+          situated in Sotai, Jorhat District of Assam. Formerly, it was Science College, established in 1971, as a
+          Degree Science College with Courses in Major Science subjects namely Physics, Chemistry and Mathematics.
+          <br>
+          <br>
+          In the year 2008, it was renamed as Jorhat Institute of Science and Technology with an aim to expand the
+          Institute. New Departments namely Department of Computer Science and Information Technology was
+          introduced in the year, 2007 by introducing 3 years professional course in B.Sc. (IT) and two Engineering
+          Branches namely, Electronics and Telecommunications (ETC) and Power Electronics and Instrumentation (PE&I)
+          in August, 2009 and two more new branches namely Mechanical Engineering and Civil Engineering are introduced
+          from the academic session 2016-17. To fulfill the Mission and Vision of the Institute, from the acadmic
+          session August,2016, Post Graduate Degree Courses i.e. M.Sc. in Physics and Mathematics are introduced with
+          due permission from the Affilliating University(Dibrugarh University) in regular mode as well as M.Sc. in
+          Chemistry is introduced from the academic session 2017-18.
+    </div>
+        <div class="col">      
+        <img id="BBC" src="{% static 'images/principal-jist.jpg' %}">
+        <p>Principal: Dr. B. N. Choudhury, B.E., M.Tech., Ph.D.</p>
+        </div>
+        </div>
+  </div>
+  <!--Image gallery-->
+  <div class="gallery">
+           <div class="image-box">
+                <a href="{% static 'images/Abx_Bus.jpg'%}" data-lightbox="mygallery" ><img src="{% static 'images/Abx_Bus.jpg'%}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/Abx_cicuit.jpg'%}" data-lightbox="mygallery"><img src="{% static 'images/Abx_cicuit.jpg'%}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/Abx_car.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/Abx_car.jpg' %}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/Abx_julia.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/Abx_julia.jpg' %}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/Abx_Sahil.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/Abx_Sahil.jpg' %}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/clg_road.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/clg_road.jpg' %}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/Abx_olly.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/Abx_olly.jpg' %}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/chem1.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/chem1.jpg' %}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/chem2.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/chem2.jpg' %}"></a>
+            </div>
+   </div>
+    
+  <!-- Maps -->
+  <div class="mapouter">
+    <div class="gmap_canvas">
+      <iframe width="100%" height="500" id="gmap_canvas"
+        src="https://maps.google.com/maps?q=jorhat%20institute%20of%20science%20and%20technology&t=k&z=15&ie=UTF8&iwloc=&output=embed"
+        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+      </iframe>
+      <a href="https://www.utilitysavingexpert.com">Utility Saving Expert</a>
+    </div>
+  </div>
+<style>
+
+</style>
+
+<div class="footer">
+  <ul>
+    <li>
+    Follow Us On
+    </li>
+    <br>
+    <li>
+     <img src="{% static 'images/fb.png' %}" height="30px" width="30px">
+     <img src="{% static 'images/tt.png' %}" height="30px" width="30px">
+     <img src="{% static 'images/yt.png' %}" height="30px" width="30px">
+    </li>
+    <br>
+    <ul class="foobar">
+    <li>
+    Home |
+    </li>
+    <li>
+    Privacy Policy |
+    </li>
+    <li>
+    Site Map |
+    </li>
+    <li>
+    Tenders |
+    </li>
+    <li>
+    Recruitments |
+    </li>
+    <li>
+    Contact Us
+    </li>
+    </ul>
+   <li>
+    © 2019 All Rights Reserved Terms of Use and Privacy Policy.
+    </li>
+  </ul> 
+</div>
+</body>
+</html>

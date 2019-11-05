@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Enter Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Enter_details.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">JIST</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/feedback/">Feedback<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="box">
+        <h2>ENTER DETAILS</h2>
+        <img src="{% static 'images/Details.png' %}">
+        <div class="container">
+            <form action="/PutDetails/{{name}}/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-box">
+                            <input type="text" name="fname" required="">
+                            <label for="">First name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-box">
+                            <input type="text" name="lname" required="">
+                            <label for="">Last name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-box" id="select">
+                            Gender:
+                            <select name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-box">
+                            <input type="text" name="addr" required="">
+                            <label for="">Address</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-box">
+                            <input type="text" name="phone" required="">
+                            <label for="">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-box">
+                            <input type="text" name="mail" required="">
+                            <label for="">E-Mail</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-box">
+                            <input type="text" name="semester" required="">
+                            <label for="">Semester</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-box">
+                            <input type="text" name="department" required="">
+                            <label for="">Department</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-box">
+                            <input type="file" name="pic" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-btn">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

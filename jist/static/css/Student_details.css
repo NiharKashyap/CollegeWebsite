@@ -1,0 +1,74 @@
+body{
+    background-color: #D32F2F;
+}
+/* customizing the navbar */
+.navbar{
+    color: white;
+    background-color: #F44336;
+}
+.navbar-brand{
+    color: #ffffff;
+}
+.nav-link {
+    color: white !important;
+}
+.navbar-toggler{
+    color: white;
+}
+.nav-link:hover{
+    background-color: grey;
+    border-radius: 20px;
+}
+/* fullsceen the row */
+.row{
+    height: 100%;
+}
+/* background of image */
+.col-md-2{
+    background-color:#D32F2F;
+}
+/* positioning the image */
+.col-md-2 img{
+    margin-top:20px;
+    margin-right: 20px;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border:3px black;
+}
+/* background of details */
+.row .col-md-10{
+    padding: 0px;
+    position:relative;
+}
+/* background of perosnal details */
+.row .col-md-10 .personal
+{ 
+    font-family: sans-serif;
+    background-color: #FFCDD2;
+    padding:10px;
+    width:100%
+}
+/* background of academic details */
+.row .col-md-10 .academic
+{
+    font-family: sans-serif;
+    background-color: #EF9A9A;
+    padding:10px;
+    width:100%
+}
+/* background of status */
+.row .col-md-10 .status
+{
+    font-family: sans-serif;
+    background-color: #E57373;
+    padding:10px;
+    width:100%
+}
+/* hr below headings */
+.personal hr,.academic hr{
+    width:500px;
+    border: 1px solid #F44336;
+}

@@ -1,0 +1,32 @@
+hr{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid #F44336;
+  }
+  body .faculties-details, body .About-section{
+      width: 80%;
+      margin:10px auto 10px auto;
+      background-color: white;
+  }
+.navbar .nav-item .nav-link:hover{
+    background-color: grey;
+    border-radius: 20px;
+}
+.navbar{
+    position: sticky;
+    background: #F44336;
+    
+}
+.navbar .navbar-brand{
+    color: white;
+}
+.navbar .nav-item .nav-link
+{
+    color: white;
+}
+.About-section, .faculties-details
+{
+    font-family: sans-serif;
+}
