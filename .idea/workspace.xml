@@ -19,16 +19,17 @@
   <component name="ProjectId" id="1R0zmf83HsYnEUlNeWQUEOyWIsk" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jist/static/images" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jist/templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\PycharmProjects\CollegeWebsite\jist\static\images" />
-      <recent name="C:\Users\Lenovo\PycharmProjects\CollegeWebsite\jist" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\PycharmProjects\CollegeWebsite\jist\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\PycharmProjects\CollegeWebsite\jist\templates" />
+      <recent name="C:\Users\Lenovo\PycharmProjects\CollegeWebsite\jist\static\images" />
+      <recent name="C:\Users\Lenovo\PycharmProjects\CollegeWebsite\jist" />
     </key>
   </component>
   <component name="RunDashboard">

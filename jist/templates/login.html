@@ -9,7 +9,7 @@
 	<form class="log" action="/login/" method="post">
             <h1> Login </h1>
             {% csrf_token %}
-            <input class="name" type="text" name="name" placeholder="username">
+            <input class="name" type="text" name="name" placeholder="username" autocomplete="off">
             <input class="name" type="password" name="password" placeholder="password">
             <input id = "bttn" type="submit" name="" value="Submit">
             <p>Need an Account? <a href="/registration/">Sign Up</a></p>

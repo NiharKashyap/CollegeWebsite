@@ -67,19 +67,19 @@
                     </div>
                     <div class="col-md-12">
                         <div class="input-box">
-                            <input type="text" name="phone" required="">
+                            <input type="text" id="phn" name="phone" required="">
                             <label for="">Phone Number</label>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-box">
-                            <input type="text" name="mail" required="">
+                            <input type="text" id="Email" name="mail" required="">
                             <label for="">E-Mail</label>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-box">
-                            <input type="text" name="semester" required="">
+                            <input type="text" id="sem" name="semester" required="">
                             <label for="">Semester</label>
                         </div>
                     </div>
@@ -98,13 +98,45 @@
                 <div class="container-btn">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <input type="submit" value="Submit">
+                            <input type="submit" onclick="return validate()" value="Submit">
                         </div>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        function validate()
+       {
+          var phoneno = /^\d{10}$/;
+          var phn = document.getElementById("phn").value;
+          var sem = document.getElementById("sem").value;
+          var Email = document.getElementById("Email").value;
+          if(!(phn.match(phoneno)))
+                {
+              alert("Please Enter a valid phone number");
+                return false;
+                }
+          else if(sem>8)
+                {
+                 alert("Please Enter a valid sem number");
+                return false;
+                }
+               else if (isNaN(sem))
+               {
+               alert("Please Enter a valid sem number");
+               return false;
+               }
+               else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(Email)))
+               {
+               alert("Please enter a valid Email")
+               return false;
+                }
+          else{
+             return true;
+             }
+        }
+</script>
 </body>
 
 </html>

@@ -12,13 +12,8 @@ def register(request):
     if request.method=='POST':
         username = request.POST['name']
         password1=request.POST['password1']
-        password2=request.POST['password2']
         if users.objects.filter(uname=username).exists():
-            messages = "Username already exist"
-            return render(request, 'registration.html', {"message": messages})
-        elif password1 != password2:
-            messages="Passwords does not match"
-            return render(request, 'registration.html', {"message": messages})
+            return HttpResponse('Username already exist')
         else:
             user = users(uname=username,pword=password1)
             user.save()
@@ -39,7 +34,7 @@ def feeds(request):
         feed.save()
         return redirect('/feedback')
     else:
-        feed = Feedback.objects.all()[:5]
+        feed = Feedback.objects.order_by('datetime').reverse()[:5]
         return render(request, 'feedback.html', {'feedback': feed})
 
 #Login and Show User Details
@@ -83,8 +78,22 @@ def Put_Details(request, username):
 
 #Load Bsc IT page
 def bscit(request):
-    return render(request,'bsc_it.html')       
+    return render(request,'bsc_it.html')
+#load bsc page
+def bsc(request):
+    return render(request,'bsc.html')
+#load msc page
+def msc(request):
+    return render(request,'msc.html')
+#load enggineeering page
+def engg(request):
+    return render(request,'engg.html')
 
 #load Notice Board
 def notice(request):
-    return render(request,'notice_board.html')         
+    return render(request,'notice_board.html')
+
+#logout
+def logout(request):
+    #return render(request,'logout.html')
+    return HttpResponse('You have been logged out <a href="/"><p>Return Home</p></a>')

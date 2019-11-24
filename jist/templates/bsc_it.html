@@ -21,6 +21,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto ">
+                <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Departments
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/bsc/">BSc</a>
+            <a class="dropdown-item" href="/bscit/">BSc IT</a>
+            <a class="dropdown-item" href="/engg/">Engineering</a>
+            <a class="dropdown-item" href="/msc/">MSc</a>
+          </div>
+        </div>
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
@@ -108,7 +120,6 @@
                 <p><label>&nbsp;&nbsp;Designation:</label> Asstt. Prof.(Contractual)</p>
                 <p><label>&nbsp;&nbsp;E-mail Id:</label> <a href=""> </a></p>
                 <p><label>&nbsp;&nbsp;Contact number:</label> 8876434892</p>
-                <p><label>&nbsp;&nbsp;Area of Interest:</label> Natural Language Processing</p>
             </div>
             <div class="col-md-6 text-left">
                 <img src="{% static 'images/hn.jpg' %}" width="119px" height="151px" alt="">
@@ -136,6 +147,7 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>

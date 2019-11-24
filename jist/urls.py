@@ -9,4 +9,8 @@ urlpatterns = [
     path('PutDetails/<username>/',views.Put_Details),
     path('bscit/',views.bscit),
     path('notice/',views.notice),
+    path('bsc/', views.bsc),
+    path('msc/', views.msc),
+    path('engg/', views.engg),
+    path('logout/', views.logout)
 ]

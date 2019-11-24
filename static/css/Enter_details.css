@@ -1,0 +1,66 @@
+.navbar{
+    background-color: grey;
+}
+.box{
+    background-color: black;
+  }
+  img{
+      position: relative;
+      left: 45%;
+      height: 10%;
+      width: 10%;
+  }
+  .box .input-box input {
+      margin: 0px 0px 0px 10px; 
+      width: 90%;
+      padding: 10px 0px;
+      border: none;
+      outline: none;
+      background: none;
+      border-bottom: 1px solid #40C4FF;
+  }
+  .box .input-box input:focus
+  {
+      border-color: red;
+  }
+  #select{
+    margin: 0px 0px 0px 10px; 
+    padding: 10px 0px 0px 0px;
+  }
+  .box .input-box input[type="file"]
+  {
+      border:none;
+  }
+  .box .input-box label {
+    margin: 0px 0px 0px 10px; 
+     position: absolute;
+     left: 15px;
+     top: 25px;
+     pointer-events: none;
+     transition: 0.3s;
+  }
+  
+  .box .input-box input:focus ~ label,
+  .box .input-box input:valid ~ label{
+      top: -5px;
+      font-size: 14px;
+  }
+  
+  h2{
+     margin: 20px auto 20px auto;
+      text-align: center;
+      color: white;
+  }
+  
+  .container{
+      width: 50%;
+      background: white;
+      padding: 15px 0px ;
+      border-radius: 10px;
+  }
+  .container-btn input[type="submit"]
+  {
+      position:relative;
+      margin: auto;
+  }
+  

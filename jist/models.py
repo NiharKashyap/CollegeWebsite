@@ -5,11 +5,16 @@ class users(models.Model):
     uname=models.CharField(max_length=255)
     pword=models.CharField(max_length=255)
 
+    class Meta:
+        verbose_name_plural = 'Users'
+
 
 class Feedback(models.Model):
     name = models.CharField(max_length=100)
     cmnt = models.CharField(max_length=1024)
     rating=models.CharField(max_length=255)
+    datetime = models.DateTimeField(auto_now=True)
+
 
 class StuDetails(models.Model):
     uname = models.CharField(max_length=255)
@@ -24,6 +29,9 @@ class StuDetails(models.Model):
     department = models.CharField(max_length=20)
     roll_no = models.CharField(max_length=20)
     verified= models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name_plural = 'StuDetails'
 
 
 

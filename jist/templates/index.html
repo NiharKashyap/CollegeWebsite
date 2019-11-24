@@ -28,7 +28,7 @@
       <ul class="navbar-nav ml-auto ">
         {% if name %}
         <li class="nav-item">
-          <a class="nav-link" href="/">Logout <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/logout/">Logout <span class="sr-only">(current)</span></a>
         </li>
         {% else %}
         <div class="dropdown">
@@ -37,10 +37,10 @@
             Departments
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">BSc</a>
+            <a class="dropdown-item" href="/bsc/">BSc</a>
             <a class="dropdown-item" href="/bscit/">BSc IT</a>
-            <a class="dropdown-item" href="#">Engineering</a>
-            <a class="dropdown-item" href="#">MSc</a>
+            <a class="dropdown-item" href="/engg/">Engineering</a>
+            <a class="dropdown-item" href="/msc/">MSc</a>
           </div>
         </div>
         <li class="nav-item">
@@ -120,10 +120,13 @@
                 <a href="{% static 'images/Abx_olly.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/Abx_olly.jpg' %}"></a>
             </div>
             <div class="image-box">
-                <a href="{% static 'images/chem1.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/chem1.jpg' %}"></a>
+                <a href="{% static 'images/c1.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/c1.jpg' %}"></a>
             </div>
             <div class="image-box">
-                <a href="{% static 'images/chem2.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/chem2.jpg' %}"></a>
+                <a href="{% static 'images/c12.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/c12.jpg' %}"></a>
+            </div>
+            <div class="image-box">
+                <a href="{% static 'images/c15.jpg' %}" data-lightbox="mygallery"><img src="{% static 'images/c15.jpg' %}"></a>
             </div>
    </div>
     
@@ -168,7 +171,7 @@
     Tenders |
     </li>
     <li>
-    Recruitments |
+        <a href="/admin/">Admin</a> |
     </li>
     <li>
     Contact Us
